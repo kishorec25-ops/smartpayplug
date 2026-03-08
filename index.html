@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartPay Plug</title>
+</head>
 
+<body style="font-family:Arial;text-align:center;margin-top:100px">
+
+<h1>⚡ SmartPay Plug</h1>
+<p>Smart Payment Controlled Power Plug</p>
+
+<button onclick="payNow()">Pay & Turn On Power</button>
+
+<script>
+function payNow(){
+ fetch("https://smartpayplug-api.onrender.com/pay")
+ .then(res => res.json())
+ .then(data => alert(data.message));
+}
+</script>
+
+</body>
+</html>
